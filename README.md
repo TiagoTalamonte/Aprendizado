@@ -19,25 +19,6 @@ Tuplas: Entendimento e utilização de tuplas em Python.
 🛠️ Tecnologias Utilizadas
 Python 3.x
 
-📄 Como Usar
-Clonar o repositório:
-
-bash
-Copiar
-Editar
-git clone https://github.com/TiagoTalamonte/Aprendizado.git
-Navegar até o diretório do projeto:
-
-bash
-Copiar
-Editar
-cd Aprendizado
-Executar os scripts Python:
-
-bash
-Copiar
-Editar
-python nome_do_arquivo.py
 👨‍💻 Contribuições
 Contribuições são bem-vindas! Se você tem sugestões, melhorias ou novos desafios para adicionar, sinta-se à vontade para abrir um pull request.
 

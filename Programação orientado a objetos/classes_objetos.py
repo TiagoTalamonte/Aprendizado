@@ -1,31 +1,44 @@
-class Cachorro:
-    def __init__(self, nome, cor, acordado=True):
-        print("Inicializando a classe...")
-        self.nome = nome
-        self.cor = cor
-        self.acordado = acordado
+# Organização: Agrupa dados (atributos) e comportamentos (métodos) relacionados.
+# Reutilização: Você cria a classe uma vez, pode fazer muitos objetos diferentes sem repetir código.
+# Manutenção: Facilita modificar o comportamento de todos os objetos editando só a classe.
+# Representação do mundo real: Você modela coisas reais (pessoas, carros, contas bancárias) de forma natural.
+
+class Carro:
+    def __init__(self, marca, modelo, ligado=False):
+        print(" Inicializando o carro...")
+        self.marca = marca
+        self.modelo = modelo
+        self.ligado = ligado
 
     def __del__(self):
-        print("Removendo a instância da classe.")
+        print(f" Carro {self.marca} {self.modelo} removido da memória.")
 
-    def falar(self):
-        print("auau")
+    def ligar(self):
+        if not self.ligado:
+            self.ligado = True
+            print(f" {self.marca} {self.modelo} está agora ligado!")
+        else:
+            print(f" {self.marca} {self.modelo} já está ligado.")
 
+    def desligar(self):
+        if self.ligado:
+            self.ligado = False
+            print(f" {self.marca} {self.modelo} foi desligado.")
+        else:
+            print(f" {self.marca} {self.modelo} já está desligado.")
 
-def criar_cachorro():
-    c = Cachorro("Zeus", "Branco e preto", False)
-    print(c.nome)
+def criar_carro():
+    carro_temp = Carro("Fiat", "Uno", True)
+    print(f" Carro criado: {carro_temp.marca} {carro_temp.modelo}")
 
+# Uso principal
+carro1 = Carro("Toyota", "Corolla")
+carro1.ligar()
 
-c = Cachorro("Chappie", "amarelo")
-c.falar()
+print(" Programa em execução...")
 
-print("Ola mundo")
+del carro1  # Força chamada ao destrutor
 
-del c
+print(" Fim do programa.")
 
-print("Ola mundo")
-print("Ola mundo")
-print("Ola mundo")
-
-# criar_cachorro()
+# criar_carro()  # Teste de instância temporária

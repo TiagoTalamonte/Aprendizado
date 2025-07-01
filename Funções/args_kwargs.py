@@ -1,31 +1,26 @@
-def exibir_poema(data_extenso, *args, **kwargs):
-    texto = "\n".join(args)
-    meta_dados = "\n".join([f"{chave.title()}: {valor}" for chave, valor in kwargs.items()])
-    mensagem = f"{data_extenso}\n\n{texto}\n\n{meta_dados}"
-    print(mensagem)
+# *args: recebe uma lista de nomes dos usuários.
+# **kwargs: recebe os dados adicionais para cada usuário. Cada chave do kwargs é o nome de um usuário, e o valor é um dicionário com os dados.
+def cadastrar_usuarios(*args, **kwargs):
+    print("📋 Iniciando cadastro de usuários...")
+    
+    if not args:
+        print("⚠️ Nenhum nome de usuário foi informado.")
+        return
 
+    for i, nome in enumerate(args, 1):
+        print(f"\n👤 Usuário {i}: {nome}")
+        # Verifica se existem parâmetros específicos para esse usuário
+        if nome in kwargs:
+            dados = kwargs[nome]
+            for chave, valor in dados.items():
+                print(f"   - {chave}: {valor}")
+        else:
+            print("   - Nenhum dado extra fornecido.")
 
-exibir_poema(
-    "Zen of Python",
-    "Beautiful is better than ugly.",
-    "Explicit is better than implicit.",
-    "Simple is better than complex.",
-    "Complex is better than complicated.",
-    "Flat is better than nested.",
-    "Sparse is better than dense.",
-    "Readability counts.",
-    "Special cases aren't special enough to break the rules.",
-    "Although practicality beats purity.",
-    "Errors should never pass silently.",
-    "Unless explicitly silenced.",
-    "In the face of ambiguity, refuse the temptation to guess.",
-    "There should be one-- and preferably only one --obvious way to do it.",
-    "Although that way may not be obvious at first unless you're Dutch.",
-    "Now is better than never.",
-    "Although never is often better than *right* now.",
-    "If the implementation is hard to explain, it's a bad idea.",
-    "If the implementation is easy to explain, it may be a good idea.",
-    "Namespaces are one honking great idea -- let's do more of those!",
-    autor="Tim Peters",
-    ano=1999,
+# Exemplo de uso:
+cadastrar_usuarios(
+    "Alice", "Bob", "Carlos",
+    Alice={"idade": 28, "email": "alice@example.com"},
+    Bob={"idade": 34, "telefone": "99999-9999"},
+    Carlos={"email": "carlos@example.com"}
 )

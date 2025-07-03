@@ -1,0 +1,14 @@
+[
+    {
+        "nome": "Tiago Talamonte",
+        "nascimento": "14/09/1998",
+        "cpf": "46917994863",
+        "endereco": "Marino Felix, 31, Centro, Itatinga/SP"
+    },
+    {
+        "nome": "Rejane Kelen",
+        "nascimento": "01/01/1976",
+        "cpf": "123456789123",
+        "endereco": "Marino Felix, 31, Centro, Itatinga/SP"
+    }
+]

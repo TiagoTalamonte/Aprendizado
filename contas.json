@@ -1,0 +1,16 @@
+[
+    {
+        "numero": 1,
+        "cpf": "46917994863",
+        "saldo": 200.0,
+        "extrato": "Depósito: R$ 200.00\n",
+        "limite_saques": 3
+    },
+    {
+        "numero": 2,
+        "cpf": "123456789123",
+        "saldo": 350.0,
+        "extrato": "Depósito: R$ 350.00\n",
+        "limite_saques": 3
+    }
+]
